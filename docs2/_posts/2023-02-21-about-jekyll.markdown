@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "About Jekyll!"
 date:   2023-02-21 10:41:04 +0800
 tags:	Jekyll GithubPages

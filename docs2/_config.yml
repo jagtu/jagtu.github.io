@@ -1,59 +1,38 @@
 # Welcome to Jekyll!
 #
 # 此配置文件用于影响整个站点的设置, 你应该设置一次，之后很少需要编辑
-# If you find yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
+# This config file is meant for settings that affect your entire site, values
+# which you are expected to set up once and rarely need to edit after that.
 # For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-
-title: "Jagtu'Blog"
-email: jagtu@sina.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Swift、Swift UI、Objective-c、UIKit、Flutter、Vue, that be conducive to iOS programmers.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://jagtu.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-github_username:  jagtu
-
-# Build settings
+# `jekyll serve`. If you change this file, please restart the server process.
 
 # Theme Settings
-# 使用minimal-mistakes主题
+#
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
-#theme: minima
-remote_theme             : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "contrast" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+# theme                  : "minimal-mistakes-jekyll"
+# remote_theme           : "mmistakes/minimal-mistakes"
+minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "zh-CN"
-#title                    : ""
+locale                   : "en-US"
+title                    : "Jagtu Blog"
 title_separator          : "-"
 subtitle                 : "一个喜欢聆听的iOS程序员，期待和你一起交流" # site tagline that appears below site title in masthead
-name                     : "L·Jagtu"
-#description              : "An amazing website."
-#url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-#baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : jagtu/jagtu.github.io
-teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+name                     : "Jagtu"
+description              : "An amazing website. Swift、Swift UI、Objective-c、UIKit、Flutter、Vue, that be conducive to iOS programmers."
+url                      : "https://jagtu.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+baseurl                  : "" # the subpath of your site, e.g. "/blog"
+repository               : "jagtu/jagtu.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+teaser                   : "/assets/images/500x300.png" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : "/assets/images/logo.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : "Jagtu's Blog" # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
   provider               : "giscus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
-  giscus:			# at https://giscus.app
+  giscus:		   # at https://giscus.app
     repo_id              : "R_kgDOJADyQA"
     category_name        : "Announcements"
     category_id          : "DIC_kwDOJADyQM4CUXvR"
@@ -89,11 +68,11 @@ reCaptcha:
 atom_feed:
   path                   : # blank (default) uses feed.xml
   hide                   : # true, false (default)
-search                   : true # false (default)
+search                   : true #, false (default)
 search_full_content      : false #, false (default)
 search_provider          : # lunr (default), algolia, google
 lunr:
-  search_within_pages    : true #, false (default)
+  search_within_pages    : # true, false (default)
 algolia:
   application_id         : # YOUR_APPLICATION_ID
   index_name             : # YOUR_INDEX_NAME
@@ -134,21 +113,30 @@ analytics:
 
 # Site Author
 author:
-  name             : ""
-  avatar           : "/assets/images/bio-photo.jpg" # path of avatar image
+  name             : "廖先生"
+  avatar           : "/assets/images/bio-photo.jpg"
   bio              : "一个喜静又不内向的程序员，简单实在，做事有耐心、有毅力，喜欢独处，坐在夕阳下的咖啡馆里，一起来杯咖啡吧."
-  location         : "Somewhere e.g Xm"
-  email            :
+  location         : "福建"
+  email            : "jagtu@sina.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "jagtu@sina.com"
+      url: "mailto:jagtu@sina.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://jagtu.github.io"
+    # - label: "Twitter"
+     # icon: "fab fa-fw fa-twitter-square"
+      # url: "https://twitter.com/"
+    #- label: "Facebook"
+     # icon: "fab fa-fw fa-facebook-square"
+      # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/yhclub"
+    #- label: "Instagram"
+      #icon: "fab fa-fw fa-instagram"
+      # url: "https://instagram.com/"
 
 # Site Footer
 footer:
@@ -161,16 +149,16 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: https://jagtu.github.io
+      url: "https://github.com/yhclub"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
     - label: "Bitbucket"
       icon: "fab fa-fw fa-bitbucket"
       # url:
-    - label: "gitee"
-      icon: "fab fa-fw fa-gitee"
-      url: https://gitee.com/oid
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      # url:
 
 
 # Reading Files
@@ -241,7 +229,7 @@ sass:
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
-timezone: Asia/Shanghai # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins (previously gems:)
@@ -308,32 +296,6 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: true
+      comments: # true
       share: true
       related: true
-
-# ---- end Theme of minimal-mistakes's Settings ----
-
-# plugins:
-#  - jekyll-feed
-#  - jekyll-include-cache
-
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
