@@ -1,0 +1,59 @@
+---
+layout: post
+title:  "Swift UI!"
+date:   2022-03-21 12:51:14 +0800
+categories: Swift
+---
+
+
+
+
+### Swift UI
+
+<img src="https://developer.apple.com/xcode/swiftui/images/navigation-api.svg" alt="img" style="zoom:5%;" />
+
+#### Navigation API
+
+利用对 App 导航行为的编程控制来设置它的启动状态，管理尺寸类之间的转换，响应深层链接，等等。
+
+<img src="https://developer.apple.com/xcode/swiftui/images/layout-control.svg" alt="img" style="zoom:5%;" />
+
+#### 高级布局控制
+
+构建高级的、可重复使用的布局来助力 App 的设计。除了 VStack 和 HStack 之外，SwiftUI 现在还提供了一个新的 Grid API，可以同时水平和垂直对齐视图。还有一个新的低级别自定 Layout API，让您完全控制构建 App 所需的布局。SwiftUI 现在还提供了 ViewThatFits，它让您可以指定给定视图的多个方案，并让 SwiftUI 自动选择最适合可用空间的方案。
+
+<img src="https://developer.apple.com/xcode/swiftui/images/macos.svg" alt="img" style="zoom:5%;" />
+
+#### 针对 macOS 的改进
+
+通过使用单个唯一窗口，以及针对窗口位置、尺寸和尺寸调整的新修饰符，改进了对 macOS 上窗口设计的支持。使用 SwiftUI 构建菜单栏附加项，以便从 Mac 上的任何位置都可以访问 App 的功能。
+
+<img src="https://developer.apple.com/xcode/swiftui/images/uikit-interoperability.svg" alt="img" style="zoom:5%;" />
+
+#### 与 UIKit 更好协作
+
+SwiftUI 可与其他界面框架协同工作。现在，您可以使用 SwiftUI 的声明式语法轻松编写自定 UICollectionView 单元格。这些自定单元格与 UIKit 完全集成，提供了所有预期的功能，如滑动操作和单元格背景。
+
+<img src="https://developer.apple.com/xcode/swiftui/images/charts.svg" alt="img" style="zoom:5%;" />
+
+#### Swift Charts
+
+使用高度可自定的图表来实现数据可视化，这些图表在所有 Apple 平台上均呈现出色的观感。Swift Charts 使用 SwiftUI 的组合语法来创建多种多样的视图，无论是折线图和柱状图，还是量化波形图等高级类型，通通不是问题。Swift Charts 还支持旁白，帮助您将信息传递给所有用户。
+
+<img src="https://developer.apple.com/xcode/swiftui/images/additional-components.svg" alt="img" style="zoom:5%;" />
+
+#### 支持其他组件
+
+SwiftUI 继续扩展，以覆盖更多现有的 UI 组件，例如半页表单，当用户想要查看更多信息时可在主视图向上滑出；或者共享表单，让用户可以使用设备上已安装的共享扩展。Mac 上的多列表格 API 现在可以在 iPad 上使用，让呈现表格数据更加简单轻松。
+
+<img src="https://developer.apple.com/xcode/swiftui/images/sharing-api.svg" alt="img" style="zoom:5%;" />
+
+#### 全新 Sharing API
+
+新的 Transferable 协议使您的数据可用于剪贴板、拖放和共享表单，现在可以使用 SwiftUI 直接调用这些功能。
+
+<img src="https://developer.apple.com/xcode/swiftui/images/widgets-on-lock-screen.svg" alt="img" style="zoom:5%;" />
+
+#### 锁定屏幕上的小组件
+
+使用 SwiftUI 使您的小组件在锁定屏幕上呈现出色的效果。设计漂亮的图标、仪表板和其他元素，让用户可以快速一览信息。
