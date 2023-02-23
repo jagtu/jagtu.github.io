@@ -1,18 +1,16 @@
 ---
 layout: page
 title: About
-description: 打码改变世界
-keywords: Zhuang Ma, 马壮
+description: 编码改变世界
+keywords: Jagtu, iOS, Swift, Flutter
 comments: true
 menu: 关于
 permalink: /about/
 ---
 
-我是马壮，码而生，码而立。
+我是Jagtu，曾经有一份优雅的代码摆在我面前，但是我没有珍惜，等我失去后才后悔莫及，尘世间最痛苦的事情莫过于此。如果上天能够给我一个再来一次的机会，我一定要对这段代码加上注释。如果非要在这份注释上加一个要求，我希望是。。。。。。再花个流程图！
 
-仰慕「优雅编码的艺术」。
-
-坚信熟能生巧，努力改变人生。
+优雅的人生，编码的艺术，熟能生巧，努力改变人生。
 
 ## 联系
 
@@ -20,13 +18,11 @@ permalink: /about/
 {% for website in site.data.social %}
 <li>{{website.sitename }}：<a href="{{ website.url }}" target="_blank">@{{ website.name }}</a></li>
 {% endfor %}
-{% if site.url contains 'mazhuang.org' %}
 <li>
-微信公众号：<br />
-<img style="height:192px;width:192px;border:1px solid lightgrey;" src="{{ site.url }}/assets/images/qrcode.jpg" alt="闷骚的程序员" />
+<img style="height:192px;width:192px;border:1px solid lightgrey;" src="{{ site.url }}/assets/images/bio-photo.jpg" alt="闷骚的程序员" />
 </li>
-{% endif %}
 </ul>
+
 
 
 ## Skill Keywords
