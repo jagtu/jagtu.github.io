@@ -1,6 +1,12 @@
 # main links
 main:
   - title: "Home"
-    url: /
+    url: /year-archive/
+  - title: "Swift"
+    url: /categories/swift/
+  - title: "iOS"
+    url: /categories/ios/
+  - title: "Flutter"
+    url: /categories/flutter/
   - title: "About"
     url: /about/
