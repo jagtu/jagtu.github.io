@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 希尔排序
-categories: 算法
+categories: algorithm
 description:算法希尔排序了解
 keywords:排序算法, 希尔排序
 ---
