@@ -1,9 +1,9 @@
 ---
 layout: post
 title: ChatGPT API 介绍
-categories: [ai, chatGPT]
+categories: [AI]
 description: SwiftUI is a modern way to declare user interfaces for any Apple platform. Create beautiful, dynamic apps faster than ever before.
-keywords: ai, GPT, chat
+keywords: AI, chatGPT
 
 ---
 

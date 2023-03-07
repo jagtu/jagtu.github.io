@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sass基础入门
-categories: 前端
+categories: uni-app
 description: 世界上最成熟、最稳定、最强大的专业级CSS扩展语言。
 keywords: Sass, css
 ---
