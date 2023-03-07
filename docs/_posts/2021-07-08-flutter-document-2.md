@@ -55,7 +55,7 @@ CPU 把计算好的、需要显示的内容交给 GPU，由 GPU 完成渲染后�
 
 通常操作系统会封装一套操作显示器硬件命令的API供操作系统之上的应用调用，但是对于应用开发者来说，直接调用这些操作系统提供的API是比较复杂和低效的，因为操作系统提供的API往往比较基础，直接调用需要了解API的很多细节。正是因为这个原因，几乎所有用于开发GUI程序的编程语言都会在操作系统之上再封装一层，将操作系统原生API封装在一个编程框架和模型中，然后定义一种简单的开发规则来开发GUI应用程序，而这一层抽象，正是我们所说的“UI”系统，如Android SDK正是封装了Android操作系统API，提供了一个“UI描述文件XML+Java操作DOM”的UI系统，而iOS的UIKit 对View的抽象也是一样的，他们都将操作系统API抽象成一个基础对象（如用于2D图形绘制的Canvas），然后再定义一套规则来描述UI，如UI树结构，UI操作的单线程原则等
 
-![iOS](/assets/images/flutter-render-image.png)
+![Flutter渲染](/assets/images/flutter-render-image.png)
 
 #### Flutter是怎么运转的
 
