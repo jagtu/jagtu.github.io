@@ -18,7 +18,7 @@ keywords: flutter, flutter module
 
 2、关注Flutter 项目的打包产物：
 
-<img src="/Users/jagtu/Library/Application Support/typora-user-images/image-20220121180036960.png" alt="image-20220121180036960" style="zoom:50%;" />
+<img src="/assets/images/image-20220121180036960.png" alt="image-20220121180036960" style="zoom:50%;" />
 
 ​											dart的核心代码主要在libapp.so这个so文件里
 
