@@ -3,7 +3,7 @@ layout: post
 title: 常用算法面试题
 categories: interview
 description: 真傻还是假聪明，这是个问题。
-keywords: 算法, 题目
+keywords: 算法, interview
 ---
 
 [toc]
@@ -12,19 +12,243 @@ keywords: 算法, 题目
 
 # 冒泡排序
 
-<details>
-<summary>查看答案</summary>
-[冒泡排序](/2015/06/01/bubble-sort.md)
-</details>
+- 中文名：**冒泡排序**（Bubble Sort）
+- 时间复杂度：**O(n²)**
+- 空间复杂度：**O(1)**
+- 稳定性：**稳定**
+
+冒泡排序对比两个元素的结果，之后根据大小交换位置的一种排序方法。
+
+### 冒泡排序的图解
+
+![image-20200326111633108](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326111633108.png)
+
+**第一次冒泡排序**
+
+8和3对比，8大于3交换位置
+
+![image-20200326111729817](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326111729817.png)
+
+![image-20200326111754527](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326111754527.png)
+
+8和6对比，8大于6，交换位置
+
+![image-20200326111855780](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326111855780.png)
+
+![image-20200326111919801](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326111919801.png)
+
+8和12对比，小于12，则位置不变
+
+![image-20200326111952714](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326111952714.png)
+
+![image-20200326111919801](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326111919801.png)
+
+12和1对比，大于1，交换位置
+
+![image-20200326112047807](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326112047807.png)
+
+![image-20200326112111462](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326112111462.png)
+
+**第二次冒泡排序**
+
+3和6对比，小于6，位置不变
+
+![image-20200326112153845](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326112153845.png)
+
+![image-20200326112111462](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326112111462.png)
+
+6和8对比，小于8，则位置不变
+
+![image-20200326112249577](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326112249577.png)
+
+![image-20200326112111462](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326112111462-20200326112258433.png)
+
+8和1对比，大于1，则交换位置
+
+![image-20200326112331744](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326112331744.png)
+
+![image-20200326112358661](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326112358661.png)
+
+**第三次冒泡排序**
+
+3和6对比，小于6，位置不变
+
+![image-20200326112450701](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326112450701.png)
+
+![image-20200326112504459](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326112504459.png)
+
+6和1对比，大于1，交换位置
+
+![image-20200326112534010](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326112534010.png)
+
+![image-20200326112556953](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326112556953.png)
+
+**第四次冒泡排序**
+
+3和1对比，大于1，交换位置
+
+![image-20200326112633072](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326112633072.png)
+
+![image-20200326112658086](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326112658086.png)
+
+剩余一个元素排序完毕
+
+### 示例代码
+
+```swift
+class Solution {
+    func bubble(_ numbers:inout [Int]) {
+        guard numbers.count > 1 else {
+            return
+        }
+        var count = numbers.count
+        while count > 1 {
+            for i in 0 ..< (count - 1) {
+                let j = i + 1
+                let n1 = numbers[i]
+                let n2 = numbers[j]
+                if n2 < n1 {
+                    numbers[i] = n2
+                    numbers[j] = n1
+                }
+                print(numbers)
+            }
+            count -= 1
+        }
+    }
+}
+```
+
 
 
 
 # 选择排序
 
-<details>
-<summary>查看答案</summary>
-[选择排序](八大排序算法/选择排序.md)
-</details>
+- 中文名：**选择排序**（Selection Sort）
+- 时间复杂度：**O(n^2)
+- 稳定性：**不稳定**
+
+选择排序是第一次从第一个和最后一个找出最小值和第一个交换，第二次从第二个到最后一个找出最小值和第二个交换，直到交换完毕。
+
+
+
+### 选择排序的图解
+
+![image-20200325151628128](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200325151628128-20200325154219267.png)
+
+**第一次循环(默认最小值为8)**
+
+1. 3和8对比，3小于，此时最小值为3
+
+   ![image-20200325154731873](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200325154731873.png)
+
+   
+
+2. 12个3对比，12大于3，此时最小值为3
+
+   ![image-20200325154835942](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200325154835942.png)
+
+3. 45和3对比，45大于3，此时最小值为3
+
+   ![image-20200325154916788](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200325154916788.png)
+
+4. 1和3对比，1小于3，此时最小值为1
+
+   ![image-20200325155005041](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200325155005041.png)
+
+5. 此时我们把8和1的位置互换
+
+   ![image-20200325155114725](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200325155114725.png)
+
+6. 排序之后
+
+   ![image-20200325155147676](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200325155147676.png)
+
+---
+
+**第二次循环(默认值3)**
+
+1. 12个3对比大于3，则当前最小值为3
+
+   ![image-20200325155349567](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200325155349567.png)
+
+2. 45和3对比，大于3，则此时最小值为3
+
+   ![image-20200325155433518](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200325155433518.png)
+
+3. 8和3对比，大于3，此时最小值为3
+
+   ![image-20200325155521219](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200325155521219.png)
+
+4. 此时查出最小值为3，这位置不变
+
+   ![image-20200325155147676](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200325155147676.png)
+
+---
+
+**第三次循环(最小值默认为12)**
+
+1. 45和12对比，大于12，此时的最小值为12
+
+   ![image-20200325155722325](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200325155722325.png)
+
+2. 8和12对比，小于12，此时最小值为8
+
+   ![image-20200325155812268](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200325155812268.png)
+
+3. 查出最小值为8，我们把12和8对调位置
+
+   ![image-20200325155907043](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200325155907043.png)
+
+4. 排序之后
+
+   ![image-20200325155942222](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200325155942222.png)
+
+---
+
+**第四次循环(最小值默认为45)**
+
+1. 12和45对比小于45，当前最小值为12
+
+   ![image-20200325161908552](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200325161908552.png)
+
+2. 12和45进行交换
+
+   ![image-20200325161951981](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200325161951981.png)
+
+   
+---
+
+此时已经排序完成
+
+### 示例代码
+
+```swift
+class Solution {
+    /// 选择排序
+    func selectSort(_ numbers:inout [Int]) {
+        guard numbers.count > 1 else {
+            return
+        }
+        for i in 0 ..< (numbers.count - 1) {
+            var min = numbers[i]
+            var minIndex = i
+            var j = i + 1
+            while j < numbers.count {
+                let n1 = numbers[j]
+                if n1 < min {
+                    min = n1
+                    minIndex = j
+                }
+                j += 1
+            }
+            numbers[minIndex] = numbers[i]
+            numbers[i] = min
+        }
+    }
+}
+```
+
 
 # 快速排序算法
 
@@ -313,38 +537,542 @@ func insertSort(_ numbers:inout [Int]) {
 
 # 希尔排序
 
-<details>
-<summary>查看答案</summary>
+- 中文名：**希尔排序**（Shell's Sort）
+- 别  名：直接插入排序
 
-[希尔排序图解](八大排序算法/希尔排序.md)
-</details>
+- 分  类：排序方法
+- 时间复杂度：**O(![img](https://bkimg.cdn.bcebos.com/formula/eb39d4c67a9cabbd3a2690a2151ee6cc.svg))**
+- 空间复杂度：**O(1)**
+- 稳定性：**不稳定**
+
+希尔排序是插入排序的变种，是通过根据一个gap值分割数组为gap个区间，分别对区间进行插入排序。之后缩小gap值，再分割多个区间进行插入排序，当gap=1时候再整体进行插入排序。
+
+### 希尔排序的图解(设置gap为数组一半)
+
+![image-20200325151628128](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200325151628128.png)
+
+**当gap为5/2=2时候**
+
+![image-20200325151818203](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200325151818203.png)
+
+数组分为了分为了两组元素，一组为[8,12,1]一组为[3,45]
+
+**对于[8,12,1]进行快排**
+
+1. 12个8对比，大于8，则不交换位置
+
+   ![image-20200325152121579](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200325152121579.png)
+
+2. 插入之后
+
+   ![image-20200325151628128](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200325151628128.png)
+
+3. 1和8对比，小于8，交换位置
+
+   ![image-20200325152309958](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200325152309958.png)
+
+4. 插入之后
+
+   ![image-20200325152353556](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200325152353556.png)
+
+5. 8和12对比小于12，交换位置
+
+   ![image-20200325152456441](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200325152456441.png)
+
+6. 插入之后
+
+   ![image-20200325152606814](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200325152606814.png)
+
+**对[3,45]元素进行快排**
+
+1. 45和3对比，大于3，则不需要交换位置
+
+   ![image-20200325152743746](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200325152743746.png)
+
+2. 插入之后
+
+   ![image-20200325152606814](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200325152606814.png)
+
+
+
+**当gap = 5/2 - 1 = 1时候希尔排序结束了。**
+
+当前的数组虽然没有排序完成，但是整体已经从小到大排序了，我们最后将整体的进行插入排序。
+
+**整体的插入排序**
+
+> 插入排序的图解请参考[插入排序]([八大排序算法](八大排序算法)/插入排序.md)
+
+排序之后
+
+![image-20200325153239755](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200325153239755.png)
+
+### 示例代码
+
+```swift
+class Solution {
+    /// 希尔排序
+    func shellSort(_ numbers:inout [Int]) {
+        guard numbers.count > 1 else {
+            return
+        }
+        var gap:Int = numbers.count / 2
+        while gap > 1 {
+            for i in gap ..< numbers.count {
+                var j = i % gap
+                while j < i {
+                    let n1 = numbers[i]
+                    let n2 = numbers[j]
+                    if n1 < n2 {
+                        numbers[j] = n1
+                        numbers[i] = n2
+                    }
+                    print(numbers)
+                    j += gap
+                }
+            }
+            gap -= 1
+        }
+        insertSort(&numbers)
+    }
+    /// 插入排序
+    func insertSort(_ numbers:inout [Int]) {
+        guard numbers.count > 1 else {
+            return
+        }
+        for i in 1 ..< numbers.count {
+            for j in 0 ..< i {
+                let n1 = numbers[i]
+                let n2 = numbers[j]
+                if n1 < n2 {
+                    numbers[j] = n1
+                    numbers[i] = n2
+                }
+            }
+        }
+    }
+}
+```
+
+
+
+
 
 # 选择堆排序
-<details>
-<summary>查看答案</summary>
 
-[选择堆排序](八大排序算法/选择堆排序.md)
-</details>
+---
+
+- 中文名：**堆排序**（Heapsort Sort）
+
+- 时间复杂度：**O(n)+O(nlgn) ~ O(nlgn)**
+- 空间复杂度：**O(1)**
+- 稳定性：**不稳定**
+
+堆排序是选择排序的一种变种，大顶堆是节点大于或者等于左右节点的完全二叉树，小顶堆是节点小于或者等于左右节点的完全二叉树。升序排序用大顶堆，降序用小顶堆。
+
+### 堆排序图解
+
+![image-20200326085732775](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326085732775.png)
+
+此时的二叉树对应的图为
+
+![image-20200326090707661](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326090707661.png)
+
+一个二叉树对应的父节点可以通过公式`(lenght/2 - 1) ~ 0`,我们一共有`6`个元素，对应的父节点索引就是`2~0`也就是`12` `8` `3`,便利节点是从下到上，从右到左的原则。
+
+**第一次构建大顶堆**
+
+1. 便利节点12，对应的左节点是6，没有右节点，因为12比6大，所以不需要进行互换操作
+
+   ![image-20200326091405329](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326091405329.png)
+
+2. 便利节点8，左侧节点是45，右侧节点是1，最大节点是45，45比8大，需要交换位置。
+
+   ![image-20200326091547613](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326091547613.png)
+
+   ![image-20200326091629136](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326091629136.png)
+
+3. 便利节点3，左侧节点45，右侧节点12。最大节点45，45比3大，所以45和3交换。
+
+   ![image-20200326091759669](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326091759669.png)
+
+   ![image-20200326091840187](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326091840187.png)
+
+4. 查询节点12，只有左侧节点6，小于12，则不交换位置
+
+   ![image-20200326093248334](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326093248334.png)
+
+5. 查询节点3，左侧节点8，右侧节点1，最大节点8，则8大于3交换位置
+
+   ![image-20200326093341850](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326093341850.png)
+
+   ![image-20200326094025783](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326094025783.png)
+
+6. 查询节点12，左侧节点6，不需要交换
+
+   ![image-20200326094200618](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326094200618.png)
+
+7. 到此第一次大顶堆排序完成
+
+   ![image-20200326094314900](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326094314900.png)
+
+8. 我们将收尾进行互换
+
+   ![image-20200326095347775](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326095347775.png)
+
+   ![image-20200326095416523](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326095416523.png)
+   
+   **对剩余的五个元素进行大顶堆排序**
+
+![image-20200326095546825](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326095546825.png)
+
+我们通过上面进行大顶堆排序之后
+
+![image-20200326100132784](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326100132784.png)
+
+**第二次大顶堆排序完成**
+
+![image-20200326100229588](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326100229588.png)
+
+将首尾进行互换
+
+![image-20200326100324560](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326100324560.png)
+
+![image-20200326100358741](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326100358741.png)
+
+**将剩余的四个元素进行大顶堆排序**
+
+![image-20200326100443589](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326100443589.png)
+
+进行大顶堆排序完毕
+
+![image-20200326110003342](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326110003342.png)
+
+![image-20200326110031314](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326110031314.png)
+
+将首尾进行位置的互换
+
+![image-20200326110058850](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326110058850.png)
+
+![image-20200326110152825](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326110152825.png)
+
+**将剩下的元素进行大顶堆排序**
+
+![image-20200326110216266](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326110216266.png)
+
+大顶堆排序之后
+
+![image-20200326110236640](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326110236640.png)
+
+![image-20200326110257631](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326110257631.png)
+
+   将首尾互换
+
+![image-20200326110315484](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326110315484.png)
+
+![image-20200326110349948](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326110349948.png)
+
+**将剩余的两个元素进行大顶堆排序**
+
+![image-20200326110406023](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326110406023.png)
+
+大顶堆排序完毕之后
+
+![image-20200326101207774](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326101207774.png)
+
+![image-20200326101226598](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326101226598.png)
+
+首尾互换
+
+![image-20200326101253316](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326101253316.png)
+
+![image-20200326101315692](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200326101315692.png)
+
+剩余一个元素不需要再次排序，则排序完毕。
+
+### 示例代码
+
+```swift
+class Solution {
+    func heapSort(_ numbers:inout [Int], _ lenght:Int = 0) {
+        let _lenght = lenght > 0 ? lenght : numbers.count
+        guard _lenght > 1 else {
+            return
+        }
+        let count = _lenght / 2 - 1
+        var index = 0
+        while count >= index {
+            for i in (index ... count).reversed() {
+                let leftIndex = 2 * i + 1
+                let leftN = numbers[leftIndex]
+                let nodeN = numbers[i]
+                var swapIndex = i
+                if leftN > nodeN {
+                    swapIndex = leftIndex
+                }
+                let rightIndex = 2 * i + 2
+                if _lenght > rightIndex {
+                    let rightN = numbers[rightIndex]
+                    if rightN > leftN {
+                        swapIndex = rightIndex
+                    }
+                }
+                if swapIndex != i {
+                    self.swap(&numbers, i, right: swapIndex)
+                }
+            }
+            index += 1
+        }
+        swap(&numbers, 0, right: (_lenght - 1))
+        heapSort(&numbers, _lenght - 1)
+    }
+    func swap(_ numbers:inout [Int], _ left:Int, right:Int) {
+        guard numbers.count > left, numbers.count > right else {
+            return
+        }
+        let temp = numbers[left]
+        numbers[left] = numbers[right]
+        numbers[right] = temp
+    }
+}
+```
+
+
 
 # 归并排序
-<details>
-<summary>查看答案</summary>
 
-[归并排序](八大排序算法/归并排序.md)
-</details>
+- 中文名：**归并排序**（Merge Sort）
+
+- 时间复杂度：**O(n log n)**
+- 空间复杂度：**T(n)**
+- 稳定性：**稳定**
+
+归并排序是将一组序列分解按照等分依次分解，最后成为只有一个元素的小数组，最后将数组合并之后排序成为整体的数组的一种排序方法。
+
+### 归并排序图解
+
+![image-20200327094824842](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200327094824842.png)
+
+**分解数组**
+
+将数组【8 3 6 12 1】按照平均数划分
+
+![image-20200327100428478](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200327100428478.png)
+
+将数组【8 3】和数组【6 12 1】进行平分
+
+![image-20200327100549132](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200327100549132.png)
+
+将数组【12 1】进行平分
+
+![image-20200327100639480](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200327100639480.png)
+
+**合并数组**
+
+将数组【8】和数组【3】进行合并
+
+取出第一个元素8和第一个元素3对比，将3放入到新数组
+
+![image-20200327100840835](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200327100840835.png)
+
+数组【3】完毕，将第一个数组全部放在新数组中
+
+![image-20200327100942384](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200327100942384.png)
+
+将数组【12】和数组【1】进行合并
+
+取出第一个元素12和1对比，将1放到新数组中
+
+![image-20200327101121299](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200327101121299.png)
+
+数组【1】完成，将第一个数组全部放在新数组中
+
+![image-20200327101209833](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200327101209833.png)
+
+将数组【6】和数组【1 12】合并
+
+取出第一个元素6和第一个元素1对比，将1放入新数组
+
+![image-20200327101347613](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200327101347613.png)
+
+取出第一个元素6和第二个元素12对比，将6放入到新数组中
+
+![image-20200327101444249](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200327101444249.png)
+
+数组【6】完毕，将第二个数组剩余全部放在新数组中
+
+![image-20200327101553975](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200327101553975.png)
+
+将数组【3 8】和数组 【1 6 12】进行合并
+
+取出第一个元素3和第一个元素1对比，将1加入到新数组中
+
+![image-20200327101740642](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200327101740642.png)
+
+将第一个元素3和第二个元素6对比，将3加入到新数组中
+
+![image-20200327101824296](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200327101824296.png)
+
+将第二个元素8和第二个元素6对比，将6添加到新数组中
+
+![image-20200327101906271](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200327101906271.png)
+
+将第二个元素8和第三个元素12对比，将8加入到新数组
+
+![image-20200327102000773](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200327102000773.png)
+
+数组【3 8】完毕将第二个数组全部加入到新数组中
+
+![image-20200327102036706](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200327102036706.png)
+
+到底归并排序完成
+
+### 示例代码
+
+```swift
+class Solution {
+    func mergeSort(_ numbers:[Int]) -> [Int] {
+        guard numbers.count > 1 else {
+            return numbers
+        }
+        guard let cuts = cutList(numbers) else {
+            return numbers
+        }
+        return mergeList(cuts.0, cuts.1)
+    }
+    func cutList(_ numbers:[Int]) -> ([Int],[Int])? {
+        guard numbers.count > 1 else {
+            return nil
+        }
+        let cut:Int = numbers.count / 2
+        let leftNumbers = mergeSort(Array(numbers[0 ..< cut]))
+        let rightNumber = mergeSort(Array(numbers[cut...]))
+        return (leftNumbers, rightNumber)
+    }
+    
+    func mergeList(_ left:[Int], _ right:[Int]) -> [Int] {
+        guard left.count > 0 else {
+            return left
+        }
+        guard right.count > 0 else {
+            return left
+        }
+        var list:[Int] = []
+        var i = 0
+        var j = 0
+        while true {
+            guard left.count > i || right.count > j else {
+                break
+            }
+            if left.count <= i {
+                list.append(right[j])
+                j += 1
+            } else if right.count <= j {
+                list.append(left[i])
+                i += 1
+            } else {
+                let n1 = left[i]
+                let n2 = right[j]
+                if n1 < n2 {
+                    list.append(n1)
+                    i += 1
+                } else {
+                    list.append(n2)
+                    j += 1
+                }
+            }
+        }
+        return list
+    }
+}
+```
+
+
 
 # 基数排序
-<details>
-<summary>查看答案</summary>
 
-[基数排序](八大排序算法/桶排序.md)
-</details>
+---
 
-# 给一个整型数组和一个目标值，判断数组中是否有两个数字之和等于目标值
+- 中文名：**基数排序（Radix Sort）**
 
-<details>
-<summary>查看答案</summary>
+- 时间复杂度：**O (nlog(r)m)**，其中r为所采取的基数，而m为堆数
+- 空间复杂度：**O(n+k)**，其中k为桶的数量
+- 稳定性：**稳定**
 
+基数排序是首先求出最大数的个数，然后从低位到高位分别放到对应0-9的桶中，按照先进先出的规则
+
+### 基数排序的图解
+
+![image-20200327111005882](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200327111005882.png)
+
+找到最大数是321，个数是3。
+
+**按照个位数进行桶排序**
+
+![image-20200327111052227](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200327111052227.png)
+
+![image-20200327111126333](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200327111126333.png)
+
+**按照十位数进行桶排序**
+
+![image-20200327111654402](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200327111654402.png)
+
+![image-20200327111719109](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200327111719109.png)
+
+**按照百分位进行桶排序**
+
+![image-20200327111836251](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200327111836251.png)
+
+![image-20200327111917343](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200327111917343.png)
+
+此时已经排序完成
+
+### 示例代码
+
+```swift
+class Solution {
+    func baseSort(_ numbers:[Int]) -> [Int] {
+        guard numbers.count > 1 else {
+            return numbers
+        }
+        var maxValue:Int = 0
+        for i in 0 ..< numbers.count {
+            maxValue = max(numbers[i], maxValue)
+        }
+        let maxLenght = "\(maxValue)".count
+        var list:[Int] = numbers
+        for i in 0 ..< maxLenght {
+            list = bucketSort(list, i)
+        }
+        return list
+    }
+    func bucketSort(_ numbers:[Int], _ base:Int) -> [Int] {
+        var buckets:[[Int]] = Array(repeating: [], count: 9)
+        for i in 0 ..< numbers.count {
+            let n = "\(numbers[i])"
+            if n.count > base, let baseValue = Int(String(n[n.index(n.endIndex, offsetBy: (-1 - base))])) {
+                var list = buckets[baseValue]
+                list.append(numbers[i])
+                buckets[baseValue] = list
+            } else {
+                var list = buckets[0]
+                list.append(numbers[i])
+                buckets[0] = list
+            }
+        }
+        var list:[Int] = []
+        for i in 0 ..< buckets.count {
+            list += buckets[i]
+        }
+        return list
+    }
+}
+```
+
+
+# 其他题目
+
+### 给一个整型数组和一个目标值，判断数组中是否有两个数字之和等于目标值
 
 ```swift
 func sum(_ nums:[Int], _ target:Int) -> Bool {
@@ -362,12 +1090,10 @@ func sum(_ nums:[Int], _ target:Int) -> Bool {
 
  因为既然数组有两个数之后等于目标值，那么这两个值一定在数组里面。我们按照顺序，查询剩余的值是否存在即可。
 
-</details>
 
-# 给定一个整型数组中有且仅有两个数字之和等于目标值，求两个数字在数组中的序号
 
-<details>
-<summary>查看答案</summary>
+### 给定一个整型数组中有且仅有两个数字之和等于目标值，求两个数字在数组中的序号
+
 
 ```swift
 func sum(_ nums:[Int], _ target:Int) -> (Int,Int)? {
@@ -383,12 +1109,8 @@ func sum(_ nums:[Int], _ target:Int) -> (Int,Int)? {
 }
 ```
 
-</details>
+### 给一个链表和一个值 x，要求只保留链表中所有小于 x 的值，原链表的节点顺序不能变
 
-# 给一个链表和一个值 x，要求只保留链表中所有小于 x 的值，原链表的节点顺序不能变
-
-<details>
-<summary>查看答案</summary>
 
 ```swift
 func getLeftList(_ node:ListNode?, _ x:Int) -> ListNode? {
@@ -403,12 +1125,8 @@ func getLeftList(_ node:ListNode?, _ x:Int) -> ListNode? {
     }
 }
 ```
-</details>
+### 求二叉树的最大深度
 
-# 求二叉树的最大深度
-
-<details>
-<summary>查看答案</summary>
 
 ```swift
 // 计算树的最大深度
@@ -420,12 +1138,10 @@ func maxDepth(root: TreeNode?) -> Int {
 }
 ```
 
-</details>
 
-# 如果判断一个二叉树是二叉搜索树
 
-<details>
-<summary>查看答案</summary>
+### 如果判断一个二叉树是二叉搜索树
+
 
 ```swift
 // 判断一颗二叉树是否为二叉查找树
@@ -449,6 +1165,4 @@ private func _helper(node: TreeNode?, _ min: Int?, _ max: Int?) -> Bool {
   return _helper(node.left, min, node.val) && _helper(node.right, node.val, max)
 }
 ```
-
-</details>
 
