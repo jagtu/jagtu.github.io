@@ -1,6 +1,6 @@
 ---
 layout: wiki
-title: 屏幕适配
+title: Android屏幕适配
 cate1: Android
 cate2:
 description: 屏幕适配

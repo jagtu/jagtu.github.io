@@ -1,10 +1,10 @@
 ---
 layout: wiki
 title: 架构模式
-cate1: Android
+cate1: Android,ios
 cate2: 
 description: 架构模式
-keywords: Android
+keywords: Android,ios
 ---
 
 ## 架构模式
