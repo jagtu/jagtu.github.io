@@ -8,5 +8,5 @@ keywords: Flutter, flutter module
 
 
 
-<img src="/assets/images/flutter-atlas.jgp" alt="Flutter知识图谱" style="zoom:50%;" />
+<img src="/assets/images/flutter-atlas.jpg" alt="Flutter知识图谱" style="zoom:50%;" />
 
