@@ -15,6 +15,8 @@ keywords:排序算法, 选择排序, Selection Sort
 
 选择排序是第一次从第一个和最后一个找出最小值和第一个交换，第二次从第二个到最后一个找出最小值和第二个交换，直到交换完毕。
 
+
+
 ## 选择排序的图解
 
 ![image-20200325151628128](https://raw.githubusercontent.com/joserccblog/uPic/upic/uPic/image-20200325151628128-20200325154219267.png)
