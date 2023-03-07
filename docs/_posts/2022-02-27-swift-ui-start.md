@@ -1,10 +1,9 @@
 ---
 layout: post
 title: SwiftUI框架入门
-categories: [swift, swiftui]
+categories: [Swift, SwiftUI]
 description: SwiftUI在每个iOS平台上声明 App 的用户界面和行为。
-keywords: swift, swiftui
-
+keywords: Swift, SwiftUI
 ---
 
 ## 概览

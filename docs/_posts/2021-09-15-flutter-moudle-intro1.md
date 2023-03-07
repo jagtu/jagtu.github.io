@@ -1,9 +1,9 @@
 ---
 layout: post
 title: 原生工程与Flutter混合开发
-categories: flutter
+categories: Flutter
 description: 将 Flutter 集成到现有工程
-keywords: flutter, flutter module
+keywords: Flutter, flutter module
 ---
 
 

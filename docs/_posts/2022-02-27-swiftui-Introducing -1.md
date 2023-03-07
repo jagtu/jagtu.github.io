@@ -1,3 +1,13 @@
+---
+layout: post
+title: SwiftUI 介绍
+categories: [Swift, SwiftUI]
+description: SwiftUI is a modern way to declare user interfaces for any Apple platform. Create beautiful, dynamic apps faster than ever before.
+keywords: SwiftUI
+---
+
+
+
 - Introducing SwiftUI
 
   SwiftUI是一种为任何苹果平台声明用户界面的现代方式。比以往更快地创建漂亮、动态的应用程序。

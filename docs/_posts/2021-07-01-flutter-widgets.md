@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Flutter常用widget
-categories: flutter
+categories: Flutter
 description: Flutter的一些常用widget
-keywords: flutter, widget
+keywords: Flutter, widget
 ---
 
 

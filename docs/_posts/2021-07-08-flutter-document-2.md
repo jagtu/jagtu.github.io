@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Flutter跨平台方案介绍
-categories: flutter
+categories: Flutter
 description: Flutter区别于其他方案的关键技术是什么
-keywords: flutter, 跨平台
+keywords: Flutter, 跨平台
 ---
 
 

@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Flutter在Android端的热更新方案
-categories: flutter
+categories: Flutter
 description: Flutter在Android端的热更新方案
-keywords: flutter, flutter module
+keywords: Flutter, flutter module
 ---
 
 
