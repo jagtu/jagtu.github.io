@@ -6,7 +6,9 @@ description: 真傻还是假聪明，这是个问题。
 keywords: 算法, interview
 ---
 
-[toc]
+
+
+[TOC]
 
 
 
