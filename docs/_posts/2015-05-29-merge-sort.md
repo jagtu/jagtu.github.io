@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 归并排序
-categories: algorithm
+categories: interview
 description:算法归并排序了解
 keywords:排序算法, 归并排序, Merge Sort
 ---

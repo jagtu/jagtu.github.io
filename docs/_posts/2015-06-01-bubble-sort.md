@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 归并排序
-categories: 算法
+categories: interview
 description:算法归并排序了解
 keywords:排序算法, 冒泡排序, Bubble Sort
 ---

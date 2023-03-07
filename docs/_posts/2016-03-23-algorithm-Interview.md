@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 常用算法面试题
-categories: Blog
+categories: interview
 description: 真傻还是假聪明，这是个问题。
 keywords: 算法, 题目
 

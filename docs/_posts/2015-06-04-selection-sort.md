@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 选择排序
-categories: algorithm
+categories: interview
 description:选择排序算法
 keywords:排序算法, 选择排序, Selection Sort
 ---
